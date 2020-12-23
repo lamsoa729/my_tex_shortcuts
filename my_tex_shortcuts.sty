@@ -1,0 +1,116 @@
+\ProvidesPackage{active_stress}
+\newcommand{\bD}{{\bf D}}
+\newcommand{\bI}{{\bf I}}
+\newcommand{\bQ}{{\bf Q}}
+\newcommand{\bX}{{\bf X}}
+\newcommand{\bU}{{\bf U}}
+\newcommand{\bP}{{\bf P}}
+\newcommand{\bsigma}{\bm{\sigma}}
+\newcommand{\bsigij}{\bm{\sigma}_{i,j}}
+\newcommand{\bSigma}{\bm{\Sigma}}
+\newcommand{\Lambdaij}{\bm{\Lambda}_{i,j}} 
+\newcommand{\Lambdaji}{\bm{\Lambda}_{j,i}} 
+\newcommand{\Pij}{\bm{\Pi}_{i,j}} 
+%\newcommand{\bPi}{\bm{P}_i} 
+\newcommand{\bPi}{\phat_i\phat_i} 
+\newcommand{\bPj}{\phat_j\phat_j} 
+\newcommand{\bXij}{\bm{X}_{i,j}} 
+\newcommand{\dLambdaij}{\dot{\bm{\Lambda}}_{i,j}} 
+\newcommand{\dLambdaji}{\dot{\bm{\Lambda}}_{j,i}} 
+\newcommand{\dPij}{\dot{\bm{\Pi}}_{i,j}} 
+\newcommand{\dXij}{\dot{\bm{X}}_{i,j}} 
+\newcommand{\bff}{{\bf f}}
+\newcommand{\bA}{{\bf A}}
+\newcommand{\bF}{{\bf F}}
+\newcommand{\bFij}{{\bf F}_{i,j}}
+\newcommand{\bfij}{{\bf f}_{i,j}}
+\newcommand{\Dij}{\Delta_{i,j}} 
+\newcommand{\bT}{{\bf T}}
+\newcommand{\btau}{\bm{\tau}}
+\newcommand{\bs}{{\bf s}}
+\newcommand{\bS}{{\bf S}}
+\newcommand{\bk}{{\bf k}}
+\newcommand{\br}{{\bf r}}
+\newcommand{\bxij}{{\bf x}_{i,j}}
+\newcommand{\dbxij}{\dot{\bf x}_{i,j}}
+\newcommand{\bM}{{\bf M}}
+%\newcommand{\Dr}{{\bf r}_{i,j}}
+\newcommand{\bu}{{\bf u}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\bp}{{\bf p}}
+\newcommand{\bn}{{\bf n}}
+\newcommand{\bq}{{\bf q}}
+\newcommand{\by}{{\bf y}}
+\newcommand{\bw}{{\bf w}}
+\newcommand{\bSig}{{\bf \Sigma}}
+\newcommand{\bW}{{\bf W}}
+\newcommand{\bv}{{\bf v}}
+\newcommand{\bz}{{\bf z}}
+\newcommand{\bh}{{\bf h}}
+\newcommand{\bij}{b_{i,j}}
+\newcommand{\rsqr}{x_{i,j}^2}
+\newcommand{\del}{\partial}
+\newcommand{\kb}{k_{\textrm{B}}}
+\newcommand{\para}{\parallel}
+\newcommand{\Fs}{F_{{\rm stall}}}
+\newcommand{\ls}{l_{{\rm stall}}}
+\newcommand{\Ds}{\Delta {s}}
+\newcommand{\Dt}{\Delta t}
+\newcommand{\phat}{{\bf{p}}}
+\newcommand{\xhat}{{\hat{x}}}
+\newcommand{\dphat}{\dot{\bf{p}}}
+\newcommand{\pder}[2][]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdertwo}[2][]{\frac{\partial^2#1}{\partial#2^2}}
+\newcommand{\Favg}{\mathbb{F}}
+\newcommand{\Tavg}{\mathbb{T}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\psij}{\psi_{i,j}}
+\newcommand{\hij}{h_{i,j}} 
+\newcommand{\bhij}{{\bf h}_{i,j}} 
+\newcommand{\dbhij}{\dot{{\bf h}}_{i,j}} 
+\newcommand{\dhij}{\dot{h}_{i,j}} 
+\newcommand{\vij}{v_{i,j}} 
+\newcommand{\vji}{v_{j,i}} 
+\newcommand{\uD}{D_o} 
+\newcommand{\Ke}{K_{\rm E}} 
+\newcommand{\Kon}{\bm{K}_{\rm on}} 
+\newcommand{\xc}{x_c} 
+
+\newcommand{\figref}[2][]{(fig.~\ref{#2}#1)}
+
+\newcommand{\kcl}{k_{\rm cl}}
+\newcommand{\hcl}{h_{\rm cl}}
+\newcommand{\Ucl}{U_{{\rm cl},i,j}}
+\newcommand{\pombe}{\textit{S.~pombe}}
+\newcommand{\cerev}{\textit{S.~cerevisiae}}
+\newcommand{\micron}{$\mu$m}
+\newcommand{\degree}{$^{\rm o}$C}
+\newcommand{\pers}{ s$^{-1}$}
+\newcommand{\permin}{ min$^{-1}$}
+\newcommand{\pernm}{ nM$^{-1}$}
+\newcommand{\permum}{$ \mu$m$^{-1}$}
+\newcommand{\Vbd}{V_{\rm bind}} 
+
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\CDF}{{\rm CDF}}
+\DeclareMathOperator{\PDF}{{\rm PDF}}
+\DeclareMathOperator\erf{erf}
+\DeclareMathOperator*{\SumSurfInt}{%
+\mathchoice%
+{\ooalign{$\displaystyle\sum$\cr\hidewidth$\displaystyle\oint$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\oint$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\oint$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\oint$\cr}}
+}
+\NewDocumentCommand{\kon}{O{}}{k_{{\rm on} #1}}
+\NewDocumentCommand{\koff}{O{}}{k_{{\rm off} #1}}
+\NewDocumentCommand{\ko}{O{}}{k_{{\rm o} #1}}
+\NewDocumentCommand{\PSI}{O{m} O{n} O{k}}{\psi_{i,j}^{#1, #2, #3}}
+\NewDocumentCommand{\Dr}{O{i,j}}{{\bf r}_{#1}}
+%\NewDocumentCommand{\cb}{O{ij}}{\cos(\theta_{#1})}
+\NewDocumentCommand{\cb}{O{i}O{j}}{\bp_{#1}\cdot\bp_{#2}}
+\NewDocumentCommand{\ru}{O{i}O{j}}{\bp_{#1} \cdot \bx_{#1,#2}}
+\NewDocumentCommand{\q}{O{i,j}}{q_{#1}}
+
+\endinput
