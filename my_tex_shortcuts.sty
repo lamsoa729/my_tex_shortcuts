@@ -1,4 +1,4 @@
-\ProvidesPackage{active_stress}
+\ProvidesPackage{arl_shortcuts}
 \newcommand{\bD}{{\bf D}}
 \newcommand{\bI}{{\bf I}}
 \newcommand{\bQ}{{\bf Q}}
@@ -34,7 +34,6 @@
 \newcommand{\bxij}{{\bf x}_{i,j}}
 \newcommand{\dbxij}{\dot{\bf x}_{i,j}}
 \newcommand{\bM}{{\bf M}}
-%\newcommand{\Dr}{{\bf r}_{i,j}}
 \newcommand{\bu}{{\bf u}}
 \newcommand{\bx}{{\bf x}}
 \newcommand{\bp}{{\bf p}}
@@ -59,8 +58,6 @@
 \newcommand{\phat}{{\bf{p}}}
 \newcommand{\xhat}{{\hat{x}}}
 \newcommand{\dphat}{\dot{\bf{p}}}
-\newcommand{\pder}[2][]{\frac{\partial#1}{\partial#2}}
-\newcommand{\pdertwo}[2][]{\frac{\partial^2#1}{\partial#2^2}}
 \newcommand{\Favg}{\mathbb{F}}
 \newcommand{\Tavg}{\mathbb{T}}
 \newcommand{\LL}{\mathcal{L}}
@@ -75,12 +72,11 @@
 \newcommand{\Ke}{K_{\rm E}} 
 \newcommand{\Kon}{\bm{K}_{\rm on}} 
 \newcommand{\xc}{x_c} 
-
-\newcommand{\figref}[2][]{(fig.~\ref{#2}#1)}
-
 \newcommand{\kcl}{k_{\rm cl}}
 \newcommand{\hcl}{h_{\rm cl}}
 \newcommand{\Ucl}{U_{{\rm cl},i,j}}
+\newcommand{\Vbd}{V_{\rm bind}} 
+
 \newcommand{\pombe}{\textit{S.~pombe}}
 \newcommand{\cerev}{\textit{S.~cerevisiae}}
 \newcommand{\micron}{$\mu$m}
@@ -89,7 +85,17 @@
 \newcommand{\permin}{ min$^{-1}$}
 \newcommand{\pernm}{ nM$^{-1}$}
 \newcommand{\permum}{$ \mu$m$^{-1}$}
-\newcommand{\Vbd}{V_{\rm bind}} 
+
+\newcommand{\pder}[2][]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdertwo}[2][]{\frac{\partial^2#1}{\partial#2^2}}
+
+\newcommand{\figref}[2][]{(fig.~\ref{#2}#1)}
+
+\newcommand{\esr}[2][]{\sout{#1}\textcolor{red}{#2}} 
+\newcommand{\hlr}[1]{\textcolor{red}{#1}} 
+
+
+
 
 \DeclareMathOperator{\sech}{sech}
 \DeclareMathOperator{\sgn}{sgn}
